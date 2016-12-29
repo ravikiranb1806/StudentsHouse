@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: 'userhome.html'
 })
 export class UserhomeComponent { 
-
+    student ='Student';
+    accommodator = 'Accommodator';
 }

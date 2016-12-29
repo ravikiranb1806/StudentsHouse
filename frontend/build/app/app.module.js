@@ -20,7 +20,7 @@ var appRoutes = [
     { path: '', component: home_1.HomeComponent },
     { path: 'login', component: login_1.LoginComponent },
     { path: 'signup', component: signup_1.SignupComponent },
-    { path: 'login/userhome', component: userhome_1.UserhomeComponent }
+    { path: 'userhome', component: userhome_1.UserhomeComponent }
 ];
 var AppModule = (function () {
     function AppModule() {
