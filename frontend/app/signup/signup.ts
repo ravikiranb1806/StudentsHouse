@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   templateUrl: 'signup.html'
 })
 export class SignupComponent { 
-  name = 'SignupComponent'; 
+  name = 'select';
 }

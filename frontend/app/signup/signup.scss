@@ -10,7 +10,8 @@ signup-cmp{
     .nav {
         padding-top: 10px;
         padding-bottom: 10px;
-        padding-left: 927px;
+        padding-left: 946.5px;
+        float: right;
     }
    .appname{
         padding-top: 5px;
@@ -25,5 +26,47 @@ signup-cmp{
       }
       a:hover {
           color: orangered;
+      }
+      .text-center {
+          padding-bottom: 50px;
+          padding-top: 100px;
+      }
+      #signup{
+          color: royalblue;
+      }
+      #reenterpassword {
+          padding-left: 247px;
+          padding-right:0px;
+      }
+      #education {
+          margin-left: 1px;
+          margin-top: 3px;
+      }
+      #educationdiv{
+          margin-top: -29px;
+          padding-left: 247px;
+      }
+      #major {
+          margin-left: 1px;
+          margin-top: 3px;
+      }
+      #majordiv{
+          margin-top: -30px;
+          padding-left: 247px;
+      }
+      #gender {
+          padding-left: 400px;
+          padding-right: 400px;
+          padding-top: 15px;
+      }
+      #about {
+          padding-top: 20px;
+      }
+      #aboutdiv{
+          padding: 15px 15px 15px 15px;
+      }
+      #submit{
+          padding-left: 450px;
+          padding-top: 30px;
       }
 }
