@@ -10,7 +10,7 @@ userhome-cmp {
     .nav {
         padding-top: 10px;
         padding-bottom: 10px;
-        padding-left: 929.5px;
+        padding-left: 820px;
         float: right;
     }
    .appname{
@@ -27,5 +27,13 @@ userhome-cmp {
       a:hover {
           color: orangered;
           text-decoration: none;
+      }
+      #searchbox{
+          margin-left: -75px;
+          margin-top: -45px;
+      }
+      #searchbtn{
+          margin-left: 350px;
+          margin-top: -57px
       }
 }
