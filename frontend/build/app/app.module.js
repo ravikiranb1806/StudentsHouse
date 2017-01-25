@@ -16,6 +16,7 @@ var home_1 = require("./home/home");
 var login_1 = require("./login/login");
 var signup_1 = require("./signup/signup");
 var userhome_1 = require("./userhome/userhome");
+var searchbox_1 = require("./userhome/searchbox");
 var appRoutes = [
     { path: '', component: home_1.HomeComponent },
     { path: 'login', component: login_1.LoginComponent },
@@ -38,7 +39,8 @@ AppModule = __decorate([
             home_1.HomeComponent,
             login_1.LoginComponent,
             signup_1.SignupComponent,
-            userhome_1.UserhomeComponent
+            userhome_1.UserhomeComponent,
+            searchbox_1.SearchBox
         ],
         bootstrap: [app_component_1.AppComponent]
     }),

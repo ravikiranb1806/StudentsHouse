@@ -7,6 +7,7 @@ import { HomeComponent }  from './home/home';
 import { LoginComponent } from './login/login';
 import { SignupComponent } from './signup/signup';
 import { UserhomeComponent } from './userhome/userhome';
+import { SearchBox } from './userhome/searchbox';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -25,7 +26,8 @@ const appRoutes: Routes = [
     HomeComponent,
     LoginComponent,
     SignupComponent,
-    UserhomeComponent
+    UserhomeComponent,
+    SearchBox
   ],
   bootstrap: [ AppComponent ]
 })
