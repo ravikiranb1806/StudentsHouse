@@ -9,17 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var SearchBox = (function () {
-    function SearchBox() {
+var ChatComponent = (function () {
+    function ChatComponent() {
+        this.remove = "Remove";
+        this.block = "Block";
+        this.logoff = "Log off";
     }
-    return SearchBox;
+    return ChatComponent;
 }());
-SearchBox = __decorate([
+ChatComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        selector: 'search-box',
-        template: "<input id=\"inputbox\" placeholder=\"search here\">\n                <button class=\"btn btn-default\">Search</button>"
+        selector: 'chat-cmp',
+        templateUrl: 'chat.html'
     }),
     __metadata("design:paramtypes", [])
-], SearchBox);
-exports.SearchBox = SearchBox;
+], ChatComponent);
+exports.ChatComponent = ChatComponent;

@@ -17,11 +17,15 @@ var login_1 = require("./login/login");
 var signup_1 = require("./signup/signup");
 var userhome_1 = require("./userhome/userhome");
 var searchbox_1 = require("./userhome/searchbox");
+var tabs_1 = require("./userhome/tabs");
+var chat_1 = require("./chatwindow/chat");
 var appRoutes = [
     { path: '', component: home_1.HomeComponent },
     { path: 'login', component: login_1.LoginComponent },
     { path: 'signup', component: signup_1.SignupComponent },
-    { path: 'userhome', component: userhome_1.UserhomeComponent }
+    { path: 'userhome', component: userhome_1.UserhomeComponent },
+    { path: 'tabs', component: tabs_1.Tabs },
+    { path: 'chat', component: chat_1.ChatComponent }
 ];
 var AppModule = (function () {
     function AppModule() {
@@ -40,7 +44,9 @@ AppModule = __decorate([
             login_1.LoginComponent,
             signup_1.SignupComponent,
             userhome_1.UserhomeComponent,
-            searchbox_1.SearchBox
+            searchbox_1.SearchBox,
+            tabs_1.Tabs,
+            chat_1.ChatComponent
         ],
         bootstrap: [app_component_1.AppComponent]
     }),
