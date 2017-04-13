@@ -13,6 +13,9 @@ var SignupComponent = (function () {
     function SignupComponent() {
         this.name = 'select';
     }
+    SignupComponent.prototype.onSubmit = function (value) {
+        console.log(value);
+    };
     return SignupComponent;
 }());
 SignupComponent = __decorate([

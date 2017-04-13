@@ -1,6 +1,7 @@
 import { NgModule }             from '@angular/core';
 import { BrowserModule }        from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent }   from './app.component';
 import { HomeComponent }  from './home/home';
@@ -8,21 +9,28 @@ import { LoginComponent } from './login/login';
 import { SignupComponent } from './signup/signup';
 import { UserhomeComponent } from './userhome/userhome';
 import { SearchBox } from './userhome/searchbox';
-import { Tabs } from './userhome/tabs';
-import { ChatComponent } from './chatwindow/chat';
+import { RequestsComponent } from './userhome/requests';
+import { SettingsComponent } from './userhome/settings';
+import { BlockedComponent } from './userhome/blocked';
+import { NavbarComponent } from './userhome/navbar';
+import { AccommodatorsComponent } from './userhome/accommodators';
+
+
+
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'userhome', component: UserhomeComponent },
-  { path: 'tabs', component: Tabs },
-  { path: 'chat', component: ChatComponent }
+  { path: 'requests', component: RequestsComponent },
+  { path: 'settings', component: SettingsComponent },
+  { path: 'blocked', component: BlockedComponent }
 ];
 
 @NgModule({
   imports: [ 
-    BrowserModule,
+    BrowserModule, FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   declarations: [ 
@@ -32,8 +40,11 @@ const appRoutes: Routes = [
     SignupComponent,
     UserhomeComponent,
     SearchBox,
-    Tabs,
-    ChatComponent
+    RequestsComponent,
+    SettingsComponent,
+    BlockedComponent,
+    NavbarComponent,
+    AccommodatorsComponent
   ],
   bootstrap: [ AppComponent ]
 })

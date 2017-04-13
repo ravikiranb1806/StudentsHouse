@@ -17,30 +17,30 @@
       </div>
     </div>
   </div>
-<form class="form-horizontal">
+<form class="form-horizontal" #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm.value)">
   <div class="form-group">
     <label class="col-sm-2 control-label">First Name</label>
     <div class="col-sm-10">
-      <input type="firstName" class="form-control" id="inputFirstName" placeholder="First Name">
+      <input type="text" required class="form-control" id="inputFirstName" placeholder="First Name" name="Fname" ngModel>
     </div>
     <label class="col-sm-2 control-label">Last Name</label>
     <div class="col-sm-10">
-      <input type="lastName" class="form-control" id="inputLastName" placeholder="Last Name">
+      <input type="text" required class="form-control" id="inputLastName" placeholder="Last Name" name="Lname" ngModel>
     </div>
     <label for="inputEmail" class="col-sm-2 control-label">Email</label>
     <div class="col-sm-10">
-      <input type="email" class="form-control" id="inputEmail" placeholder="Email@school.edu">
+      <input type="text" required class="form-control" id="inputEmail" placeholder="Email@school.edu" name="email" ngModel>
     </div>
       <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
       <div class="col-sm-10">
-        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+        <input type="text" required class="form-control" id="inputPassword3" placeholder="Password" name="password" ngModel>
       </div>
       <div id="reenterpassword" class="col-sm-10">
-        <input type="password" class="form-control" id="inputPassword3" placeholder="Re-enter Password">
+        <input type="text" required class="form-control" id="inputPassword3" placeholder="Re-enter Password" name="reenter password" ngModel>
       </div>
       <label id="education" class="col-sm-2 control-label">Education</label>
       <div id="educationdiv" class="col-sm-10">
-        <input type="education" class="form-control" id="inputEducation" placeholder="Education">
+        <input type="text" required class="form-control" id="inputEducation" placeholder="Education" name="education" ngModel>
       </div>
      <!-- <div class="btn-group">
       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -56,7 +56,7 @@
       </div>-->
       <label id="major" class="col-sm-2 control-label">Major</label>
       <div id="majordiv" class="col-sm-10">
-        <input type="text" class="form-control" id="inputMajor" placeholder="Major">
+        <input type="text" required class="form-control" id="inputMajor" placeholder="Major" name="major" ngModel>
       </div>
       <div id="gender" class="input-group">
       <span>
@@ -66,11 +66,11 @@
       </div>
       <label id="about" class="col-sm-2 control-label">About Yourself</label>
       <div id="aboutdiv" class="col-sm-10">
-         <input type="text" class="form-control" id="inputAbout" placeholder="Write about yourself">
+         <input type="text" required class="form-control" id="inputAbout" placeholder="Write about yourself" name="aboutyou" ngModel>
       </div>
     <div id="submit" class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
-        <a type="submit" class="btn btn-success" routerLink="/login" role="button">Sign Up</a>
+        <button type="submit" class="btn btn-success">Sign Up</button>
       </div>
     </div>
 </div>

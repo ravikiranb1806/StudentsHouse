@@ -11,21 +11,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var router_1 = require("@angular/router");
+var forms_1 = require("@angular/forms");
 var app_component_1 = require("./app.component");
 var home_1 = require("./home/home");
 var login_1 = require("./login/login");
 var signup_1 = require("./signup/signup");
 var userhome_1 = require("./userhome/userhome");
 var searchbox_1 = require("./userhome/searchbox");
-var tabs_1 = require("./userhome/tabs");
-var chat_1 = require("./chatwindow/chat");
+var requests_1 = require("./userhome/requests");
+var settings_1 = require("./userhome/settings");
+var blocked_1 = require("./userhome/blocked");
+var navbar_1 = require("./userhome/navbar");
+var accommodators_1 = require("./userhome/accommodators");
 var appRoutes = [
     { path: '', component: home_1.HomeComponent },
     { path: 'login', component: login_1.LoginComponent },
     { path: 'signup', component: signup_1.SignupComponent },
     { path: 'userhome', component: userhome_1.UserhomeComponent },
-    { path: 'tabs', component: tabs_1.Tabs },
-    { path: 'chat', component: chat_1.ChatComponent }
+    { path: 'requests', component: requests_1.RequestsComponent },
+    { path: 'settings', component: settings_1.SettingsComponent },
+    { path: 'blocked', component: blocked_1.BlockedComponent }
 ];
 var AppModule = (function () {
     function AppModule() {
@@ -35,7 +40,7 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [
-            platform_browser_1.BrowserModule,
+            platform_browser_1.BrowserModule, forms_1.FormsModule,
             router_1.RouterModule.forRoot(appRoutes)
         ],
         declarations: [
@@ -45,8 +50,11 @@ AppModule = __decorate([
             signup_1.SignupComponent,
             userhome_1.UserhomeComponent,
             searchbox_1.SearchBox,
-            tabs_1.Tabs,
-            chat_1.ChatComponent
+            requests_1.RequestsComponent,
+            settings_1.SettingsComponent,
+            blocked_1.BlockedComponent,
+            navbar_1.NavbarComponent,
+            accommodators_1.AccommodatorsComponent
         ],
         bootstrap: [app_component_1.AppComponent]
     }),

@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class SignupComponent { 
   name = 'select';
+  onSubmit(value : any){
+    console.log(value);
+  }
 }
