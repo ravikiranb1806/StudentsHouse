@@ -9,8 +9,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var signup_form_1 = require("./signup.form");
 var SignupComponent = (function () {
     function SignupComponent() {
+        this.user = new signup_form_1.SignupForm('', '', '', '', '', '', '', '');
+        this.submitted = false;
         this.name = 'select';
     }
     SignupComponent.prototype.onSubmit = function (value) {

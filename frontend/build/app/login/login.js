@@ -9,15 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var login_form_1 = require("./login.form");
 var LoginComponent = (function () {
     function LoginComponent() {
-        this.name = 'LoginComponent';
-        this.username = 'Username';
-        this.password = 'Password';
-        this.student = 'Student';
-        this.accommodator = 'Accommodator';
-        this.signup = 'SignUp';
+        this.user = new login_form_1.LoginForm('', '');
+        this.submitted = false;
+        this.name = 'select';
     }
+    LoginComponent.prototype.onSubmit = function (value) {
+        console.log(value);
+    };
     return LoginComponent;
 }());
 LoginComponent = __decorate([

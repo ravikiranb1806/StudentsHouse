@@ -43,3 +43,6 @@ from backend import models
 
 # Importing the app views
 from backend import views
+
+# Importing the REST APIs
+from backend.api.v1 import endpoints

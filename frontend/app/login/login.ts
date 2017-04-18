@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoginForm } from './login.form';
 
 @Component({
   moduleId: module.id,
@@ -6,10 +7,11 @@ import { Component } from '@angular/core';
   templateUrl: 'login.html'
 })
 export class LoginComponent { 
-  name = 'LoginComponent'; 
-  username ='Username';
-  password ='Password';
-  student = 'Student';
-  accommodator ='Accommodator';
-  signup ='SignUp';
+  user = new LoginForm('','');
+  submitted = false;
+  
+  name = 'select';
+  onSubmit(value : any){
+    console.log(value);
+  }
 }
