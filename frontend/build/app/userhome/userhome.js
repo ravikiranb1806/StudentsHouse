@@ -18,7 +18,7 @@ UserhomeComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'userhome-cmp',
-        templateUrl: 'userhome.html'
+        template: "<navbar></navbar>\n<accommodators></accommodators>"
     }),
     __metadata("design:paramtypes", [])
 ], UserhomeComponent);

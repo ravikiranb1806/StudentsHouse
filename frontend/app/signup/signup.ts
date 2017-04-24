@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SignupForm } from './signup.form';
+import { UsersService } from '../services/users.service';
 
 
 @Component({
@@ -9,11 +10,16 @@ import { SignupForm } from './signup.form';
 })
 export class SignupComponent { 
  
-  user = new SignupForm('','','','','','','','');
+  user = new SignupForm('','','','','','','','','');
   submitted = false;
  
-  name = 'select';
-  onSubmit(value : any){
+  constructor(private usersService: UsersService){}
+
+  onSubmit(value: any){
+    this.submitted = true;  
     console.log(value);
+    this.usersService.adduser(value).subscribe(data => {
+      console.log(data);
+    });    
   }
 }

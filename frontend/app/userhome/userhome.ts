@@ -3,7 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   moduleId: module.id,
   selector: 'userhome-cmp',
-  templateUrl: 'userhome.html'
+  template: `<navbar></navbar>
+<accommodators></accommodators>`
 })
 export class UserhomeComponent { 
     

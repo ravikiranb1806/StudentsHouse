@@ -1,14 +1,15 @@
 "use strict";
 var SignupForm = (function () {
-    function SignupForm(FirstName, LastName, Email, Password, Retype, Education, Major, AboutYou) {
-        this.FirstName = FirstName;
-        this.LastName = LastName;
-        this.Email = Email;
-        this.Password = Password;
-        this.Retype = Retype;
-        this.Education = Education;
-        this.Major = Major;
-        this.AboutYou = AboutYou;
+    function SignupForm(firstname, lastname, usertype, email, password, education, major, gender, about) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.usertype = usertype;
+        this.email = email;
+        this.password = password;
+        this.education = education;
+        this.major = major;
+        this.gender = gender;
+        this.about = about;
     }
     return SignupForm;
 }());

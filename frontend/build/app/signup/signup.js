@@ -10,14 +10,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var signup_form_1 = require("./signup.form");
+var users_service_1 = require("../services/users.service");
 var SignupComponent = (function () {
-    function SignupComponent() {
-        this.user = new signup_form_1.SignupForm('', '', '', '', '', '', '', '');
+    function SignupComponent(usersService) {
+        this.usersService = usersService;
+        this.user = new signup_form_1.SignupForm('', '', '', '', '', '', '', '', '');
         this.submitted = false;
-        this.name = 'select';
     }
     SignupComponent.prototype.onSubmit = function (value) {
+        this.submitted = true;
         console.log(value);
+        this.usersService.adduser(value).subscribe(function (data) {
+            console.log(data);
+        });
     };
     return SignupComponent;
 }());
@@ -27,6 +32,6 @@ SignupComponent = __decorate([
         selector: 'signup-cmp',
         templateUrl: 'signup.html'
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [users_service_1.UsersService])
 ], SignupComponent);
 exports.SignupComponent = SignupComponent;

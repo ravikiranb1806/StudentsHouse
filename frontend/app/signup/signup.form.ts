@@ -1,13 +1,14 @@
 export class SignupForm {
     constructor (
-        public FirstName: string,
-        public LastName: string,
-        public Email: string,
-        public Password: string,
-        public Retype: string,
-        public Education: string,
-        public Major: string,
-        public AboutYou: string
+        public firstname: string,
+        public lastname: string,
+        public usertype: string,
+        public email: string,
+        public password: string,
+        public education: string,
+        public major: string,
+        public gender: string,
+        public about: string
 
     ){ }
 }
