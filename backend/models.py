@@ -33,7 +33,7 @@ class User(db.Model):
     gender = db.Column(db.String(1), nullable=False)
     about = db.Column(db.String(100), nullable=False)
 
-    def __init__(self, firstname, lastname, email, education, major, gender, about, password):
+    def __init__(self, firstname, lastname, usertype, email, password, education, major, gender, about):
         """
         This function initializes this model. This function is necessary
         since we are hashing the user's password before storing it into 
@@ -43,12 +43,12 @@ class User(db.Model):
         self.lastname = lastname
         self.usertype = usertype
         self.email    = email
+        # Protecting the user's password using a hash function
+        self.password = bcrypt.generate_password_hash(password)
         self.education = education
         self.major = major
         self.gender = gender
         self.about = about
-        # Protecting the user's password using a hash function
-        self.password = bcrypt.generate_password_hash(password)
     
     def check_password(self, password):
         """This is a helper function for checking the user's password."""
